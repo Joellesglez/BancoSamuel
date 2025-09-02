@@ -1,60 +1,46 @@
-🏦 BancoSamuel
+# Banco Samuel
 
-Simulación de un minibanco en Java
-Proyecto  que permite gestionar operaciones bancarias básicas.
-
-✨ Características
-
-🆕 Crear cuentas bancarias
-
-💰 Depositar y retirar fondos
-
-📊 Consultar saldo disponible
-
-🖥️ Interfaz de línea de comandos interactiva
-
-🛠 Tecnologías
-
-Java 100%
-
-IntelliJ IDEA como entorno de desarrollo
-
-🚀 Instalación
-
-Clona este repositorio:
-
-git clone https://github.com/Joellesglez/BancoSamuel.git
+![img.png](img.png)
 
 
-Abre el proyecto en IntelliJ IDEA
-
-Compila y ejecuta la clase principal para iniciar la simulación
-
-🎮 Uso
-
-Al ejecutar la aplicación, aparecerá un menú interactivo en la consola:
-
-1. Crear cuenta
-2. Depositar
-3. Retirar
-4. Consultar saldo
-5. Salir
+Banco Samuel es una interfaz bancaria escrita en Java.
 
 
-Solo debes seguir las instrucciones en pantalla para realizar tus operaciones bancarias.
 
-🤝 Contribuciones
 
-¡Se aceptan contribuciones!
+## Pruebas de aceptación: (Teniendo en cuenta los 100€ ingresados en el apartado 1.)
+1. Ingresar 100€ -> Mensaje de confirmación; saldo 100€.
+2. Retirar 30€ -> Mensaje; saldo 70€.
+3. Retirar 100€ -> Debería aparecer `Saldo insuficiente`. (Ya que no hay saldo.)
+4. Cambiar límite diario a 50€ -> Confirmado.
+5. Retirar 60€ -> Debería aparecer `Límite diario excedido`.
+6. Ver Movimientos -> Lista con fecha, tipo, importe y saldo actualizado.
+7. Cancelar -> vuelve al menú o sale si lo haces en el titular.
+8. Se añaden apartados de Tarjetas al index donde se reflejan dos tarjetas inventadas para visualizar su internación en el index.
+9. Se añade el apartado de Cuenta al index donde se refleja un número de cuenta ficticio dentro del index.
 
-Si quieres mejorar el proyecto o agregar nuevas funcionalidades:
 
-Haz un fork del repositorio
+## Notas para la corrección
+- Paquetes: `com.minibanco.app`, `com.minibanco.domain`, `com.minibanco.exceptions`.
+- Se usan `ArrayList` para historial del banco y `LocalDateTime` para fechas que el usuario elija.
+- Excepciones personalizadas implementadas en el código.
+- Validaciones de entrada y manejo de Cancelar.
 
-Realiza tus cambios
 
-Envía un pull request
+---
 
-📄 Licencia
 
-Este proyecto está bajo la Licencia MIT.
+## Código fuente
+
+Insertado en las carpetas subyacentes. Añadida además un archivo index.html donde se refleja la página web del proyecto para su uso.
+
+### src/com/bancosamuel/domain/TipoMovimiento.java
+```java
+package com.bancosamuel.domain;
+
+
+/** Tipo de movimiento: INGRESO o RETIRO */
+public enum TipoMovimiento {
+INGRESO,
+RETIRO
+}
