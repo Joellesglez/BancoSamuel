@@ -1,11 +1,7 @@
 # Banco Samuel
 
-![img.png](img.png)
-
 
 Banco Samuel es una interfaz bancaria escrita en Java.
-
-
 
 
 ## Pruebas de aceptación: (Teniendo en cuenta los 100€ ingresados en el apartado 1.)
@@ -25,9 +21,6 @@ Banco Samuel es una interfaz bancaria escrita en Java.
 - Se usan `ArrayList` para historial del banco y `LocalDateTime` para fechas que el usuario elija.
 - Excepciones personalizadas implementadas en el código.
 - Validaciones de entrada y manejo de Cancelar.
-
-
----
 
 
 ## Código fuente
